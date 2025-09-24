@@ -1,0 +1,20 @@
+sal=int(input())
+bank=int(input())
+hostel=int(input())
+food=int(input())
+parents=int(input())
+spend=bank+hostel+food+parents
+if(spend<sal):
+    print("He can save the money")
+elif(spend==sal):
+    print("He can manage the money")
+else:
+    print("He want to work more")
+output:
+=== RESTART: C:/Users/Madhubala/AppData/Local/Programs/Python/Python313/salary_pt1.py ==
+200000
+2000
+2000
+2000
+20000
+He can save the money
