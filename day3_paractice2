@@ -1,0 +1,22 @@
+balance_amt=int(input())
+process=int(input())
+if(process==1):
+    dep_amt=int(input())
+    print("Deposit")
+    print("The current balance is",balance_amt+dep_amt)
+elif(process==2):
+    withdr_amt=int(input())
+    print("withdraw")
+    if(balance_amt>withdr_amt):
+        print("The current balance is",balance_amt-withdr_amt)
+    else:
+        print("insuff balance")
+else:
+    print("invalid input")
+
+output:
+
+= RESTART: C:/Users/Madhubala/AppData/Local/Programs/Python/Python313/salary_pt1.py
+2000
+23
+invalid input
