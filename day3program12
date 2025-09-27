@@ -1,0 +1,115 @@
+Dheena wants to know how the grading marks will works in education.could you please help him to learn the grading System. Note:-
+
+100=Grade is S
+90-99=Grade is A
+80-89=Grade is B
+70-79=Grade is C
+60-69=Grade is D
+50-59=Grade is E
+<50=Fail
+Get the subject marks from the user,then Find the average marks.Based on the average marks generate the Students grade marks.
+
+Input Format
+
+First input consists of String
+Second input consists of integer
+Third input consists of integer
+Fourth input consists of integer
+Fifth input consists of integer
+Sixth input consists of integer
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the total Marks,average marks and Grade Mark
+Sample Input 0
+
+John
+100
+99
+100
+100
+99
+Sample Output 0
+
+Name of the Student:John
+Total Mark:498
+Average Mark:99.6
+Grade Mark:A
+Sample Input 1
+
+Nivi
+30
+30
+30
+30
+30
+Sample Output 1
+
+Name of the Student:Nivi
+Total Mark:150
+Average Mark:30.0
+Grade Mark:Fail
+Contest ends in 3 days
+Submissions: 112
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+a=input()
+2
+b=int(input())
+3
+c=int(input())
+4
+d=int(input())
+5
+e=int(input())
+6
+f=int(input())
+7
+print(f"Name of the Student:{a}")
+8
+tm=b+c+d+e+f
+9
+print(f"Total Mark:{tm}")
+10
+tm=tm/5
+11
+print(f"Average Mark:{tm}")
+12
+tm=int(tm)
+13
+if(tm==100):
+14
+    print("Grade Mark:S")
+15
+elif(tm>=90 and tm<=99):
+16
+    print("Grade Mark:A")
+17
+elif(tm>=80 and tm<=89):
+18
+    print("Grade Mark:B")
+19
+elif(tm>=70 and tm<=79):
+20
+    print("Grade Mark:C")
+21
+elif(tm>=60 and tm<=69):
+22
+    print("Grade Mark:D")
+23
+elif(tm>=50 and tm<=59):
+24
+    print("Grade Mark:E")
+25
+elif(tm<50):
+26
+    print("Grade Mark:Fail")
