@@ -1,0 +1,89 @@
+The program to find if the given numbers are Friendly pairs or not (Amicable or not) is discussed here. Friendly Pairs are two or more numbers with a common abundance.
+
+For example,6 and 28 are Friendly Pairs.
+
+    (Sum of divisors of given number1)/given number1 = (Sum of divisors of given number2)/given number2  
+- sum of divisors for 6 is 1,2,3,6=(1+2+3+6)=12
+- sum of divisors for 28 is 1,2,4,7,14,28=56
+- (12/6)==(56/28).Its a Friendly Pair.
+Input Format
+
+Input consists of 2 integers.
+Constraints
+
+No Constraints
+
+Output Format
+
+If it is a Friendly Pair display "Friendly Pair" or displays "Not Friendly Pair".
+Sample Input 0
+
+15
+25
+Sample Output 0
+
+The Given Number 15 and 25 are Friendly Pairs.
+Sample Input 1
+
+8
+30
+Sample Output 1
+
+The Given Number 8 and 30 are Not Friendly Pairs.
+Contest ends in 3 days
+Submissions: 59
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+def sum_proper_divisors(n):
+2
+    if n <= 1:
+3
+        return 0
+4
+    s = 1
+5
+    i = 2
+6
+    while i * i <=n:
+7
+        if n % i == 0:
+8
+            s += i
+9
+            j = n // i
+10
+            if j != i:
+11
+                s += j
+12
+        i += 1
+13
+    return s
+14
+def abundance_class(n):
+15
+    s = sum_proper_divisors(n)
+16
+    if s == n:
+17
+        return 'perfect'
+18
+    return 'abundant' if s > n else 'deficient'
+19
+a=int(input().strip())
+20
+b=int(input().strip())
+21
+if abundance_class(a) == abundance_class(b):
+22
+    print(f"The Given Number {a} and {b} are Friendly Pairs.")
+23
+else:
+24
+    print(f"The Given Number {a} and {b} are Not Friendly Pairs.")
